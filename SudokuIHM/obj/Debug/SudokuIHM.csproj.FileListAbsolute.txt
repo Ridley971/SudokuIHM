@@ -1,0 +1,15 @@
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\bin\Debug\SudokuIHM.exe.config
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\bin\Debug\SudokuIHM.exe
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\bin\Debug\SudokuIHM.pdb
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\MainWindow.baml
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\MainWindow.g.cs
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\App.g.cs
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\SudokuIHM_MarkupCompile.cache
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\SudokuIHM.g.resources
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\SudokuIHM.Properties.Resources.resources
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\SudokuIHM.csproj.GenerateResource.Cache
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\SudokuIHM.exe
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\SudokuIHM.pdb
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\SudokuIHM_MarkupCompile.lref
+D:\_Restreint\marinette\projet\GitHub\SudokuIHM\SudokuIHM\obj\Debug\SudokuIHM.csprojResolveAssemblyReference.cache
