@@ -21,10 +21,12 @@ namespace SudokuIHM
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool checkVerbeux;
         public MainWindow()
         {
             InitializeComponent();
             DataContext = App.sudoManager;
+            checkVerbeux = (bool)cbVerbeux.IsChecked;
         }
 
         private void menuOuvrir_Click(object sender, RoutedEventArgs e)
@@ -34,9 +36,14 @@ namespace SudokuIHM
             opFile.Filter = "Sudoku Texte ou XML|*.sud;*.sudx";
 
             Nullable<bool> result=opFile.ShowDialog();
-             
-                if (result==true )                
-                   App.sudoManager.ChargerFichier(opFile.FileName);                      
+
+            if (result == true)
+            {             
+                App.sudoManager.ChargerFichier(opFile.FileName,checkVerbeux);
+                if(checkVerbeux)
+                    txtVerbeux.AppendText( App.sudoManager.mesages);
+            }
+                    
         }
 
         private void menuSauvegarder_Click(object sender, RoutedEventArgs e)
@@ -71,6 +78,12 @@ namespace SudokuIHM
 
         private void ListBoxSudokus_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (!btnRésoudre.IsEnabled && !btnValider.IsEnabled)
+            {
+                btnRésoudre.IsEnabled = true;
+                btnValider.IsEnabled = true;
+            }
+
             gridSudokuSelect.Children.Clear();
             gridSudokuSelect.ColumnDefinitions.Clear();
             gridSudokuSelect.RowDefinitions.Clear();
@@ -81,6 +94,7 @@ namespace SudokuIHM
                 gridSudokuSelect.ColumnDefinitions.Add(new ColumnDefinition());
                 gridSudokuSelect.RowDefinitions.Add(new RowDefinition());
             }
+
             for (int i = 0; i < g.Taille; i++)
             {
                 for (int j = 0; j < g.Taille; j++)
@@ -90,6 +104,23 @@ namespace SudokuIHM
                 }
             }
 
+        }
+
+        private void cbVerbeux_Click(object sender, RoutedEventArgs e)
+        {
+            checkVerbeux= (bool)cbVerbeux.IsChecked;
+        }
+
+        private void btnValider_Click(object sender, RoutedEventArgs e)
+        {
+            Grille g = App.sudoManager.grilleSelect;
+            App.sudoManager.sudValidation(g);
+        }
+
+        private void btnRésoudre_Click(object sender, RoutedEventArgs e)
+        {
+            Grille g = App.sudoManager.grilleSelect;
+            App.sudoManager.RésolutionNormale(g);
         }
    
 

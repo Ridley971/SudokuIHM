@@ -16,7 +16,8 @@
                 <MenuItem x:Name="menuOuvrir" Header="Ouvrir" Click="menuOuvrir_Click"/>
                 <MenuItem x:Name="menuQuitter" Header="Quitter" />
             </MenuItem>
-            <MenuItem x:Name="menuRésoudre"  Header="Résoudre" Click="menuRésoudre_Click"/>
+            <MenuItem x:Name="menuRésoudre"  Header="Résoudre le sudoku" Click="menuRésoudre_Click"/>
+           
         </Menu>
 
         <Grid x:Name="gridSecondaire" Grid.Row="1" Grid.Column="0">
@@ -27,7 +28,7 @@
 
             <Grid x:Name="gridGauche" Grid.Column="0" Background="AliceBlue">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="90"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
@@ -50,6 +51,9 @@
                 </ListBox>
                 
                 <StackPanel Grid.Row="0" >
+                    <CheckBox x:Name="cbVerbeux" Click="cbVerbeux_Click"> Mode Verbeux</CheckBox>
+                    <Button x:Name="btnValider" IsEnabled="False" Click="btnValider_Click">Valider le sudoku</Button>
+                    <Button x:Name="btnRésoudre" IsEnabled="False" Click="btnRésoudre_Click">Résoudre le sudoku</Button>
                     <TextBlock>
                          <TextBlock Text="{Binding grilleSelect.Taille}" />
                          <TextBlock Text="X" />
@@ -58,12 +62,13 @@
                 </StackPanel>
         </Grid>
 
-            <Grid x:Name="gridDroite" Grid.Column="1" Background="Gold">
+            <Grid x:Name="gridDroite" Grid.Column="1" >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="90"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Name="gridSudokuSelect" Grid.Row="1" Background="Green"/>
+                <TextBox Name="txtVerbeux" Grid.Row="0" Background="Black" Foreground="#FFF"  TextWrapping="Wrap" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" IsReadOnly="True"/>
                     
             </Grid>
 

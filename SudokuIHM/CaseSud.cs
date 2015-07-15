@@ -47,7 +47,7 @@ namespace SudokuIHM
             }
             set
             {
-                _nbre_hypotheses = 1;
+                _nbre_hypotheses = 0;
                 _valeur = value;
             }
         }
@@ -87,7 +87,7 @@ namespace SudokuIHM
 
         public CaseSud(char val)
         {
-            _nbre_hypotheses = 1;
+            _nbre_hypotheses = 0;
             _valeur = val;
         }
 
@@ -116,7 +116,7 @@ namespace SudokuIHM
 
         public bool supprimerHypothese(char hypotese)
         {
-            if (_nbre_hypotheses > 1)
+            if (_nbre_hypotheses > 0)
             {
                 if (Array.IndexOf(_hypotheses, hypotese) > -1)
                 {
@@ -130,6 +130,7 @@ namespace SudokuIHM
                         _valeur = _hypotheses[0];
 
                         Console.WriteLine("\n ++++++++++++++La case [{0},{1}] prend la valeur {2}++++++++++++++++++++++++\n", this.X, this.Y, this.Valeur);
+                        NbreHypos = 0;
                         return true;
                     }
 

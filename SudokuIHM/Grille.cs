@@ -79,7 +79,7 @@ namespace SudokuIHM
         public string afficherGrille()
         {
             string strGrille = "";
-            foreach (CaseSud item in _tab)
+            foreach (CaseSud item in Tab)
             {
                 if (item.Valeur == '\0')
                     strGrille += ".";
